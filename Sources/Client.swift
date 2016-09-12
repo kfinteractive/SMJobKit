@@ -26,7 +26,7 @@ open class Client {
 	}
 
 	public class func installWithPrompt(prompt: String?) throws {
-		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
+		let authRef = try ClientUtility.authWithRight(kAuthorizationRightExecute, prompt: prompt)
 
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
@@ -88,7 +88,7 @@ public class Client {
 	}
 
 	public class func installWithPrompt(prompt: String?) throws {
-		let authRef = try ClientUtility.authWithRight(kSMRightBlessPrivilegedHelper, prompt: prompt)
+		let authRef = try ClientUtility.authWithRight(kAuthorizationRightExecute, prompt: prompt)
 
 		// Here's the good stuff
 		var cfError: Unmanaged<CFError>? = nil
